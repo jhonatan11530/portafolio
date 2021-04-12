@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "db533dae-1dc2-4695-b3d1-8bf494ec6a03"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -24,13 +27,17 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/assets/img/portafolio.ico",
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/wps/css/materialize.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/wps/js/materialize.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -58,7 +65,9 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
@@ -88,7 +97,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css"

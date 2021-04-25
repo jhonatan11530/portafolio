@@ -1,8 +1,8 @@
-<div class="col m4 s12">
-    <div class="icon-block">
-        <div class="card" style="height: 300px">
-            <img loading="lazy" class="center" style="width: 80%; height: 85%;" [src]="DataEntrante.img">
-            <a class="btn blue" [attr.href]="DataEntrante.url" target="_blank">{{ 'certificaciones.ver.archivos' | translate }}</a>
-        </div>
+<div class="card" style="width: 22rem;text-align: center;">
+    <img loading="lazy" [src]="DataEntrante.img" class="card-img-top" alt="..." style="width: 100%; height: 300px;">
+    <div class="card-body">
+        <a [attr.href]="DataEntrante.url" class="btn btn-primary" target="_blank">{{
+            'certificaciones.ver.archivos'
+            | translate }}</a>
     </div>
 </div>

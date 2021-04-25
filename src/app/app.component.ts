@@ -75,56 +75,34 @@ export class AppComponent implements AfterViewInit, OnInit {
     // ngAfterViewInit EJECUTA JS Y JQUERY 
     ngAfterViewInit() {
       $(document).ready(function () {
-        $('.fixed-action-btn').floatingActionButton({
-          toolbarEnabled: true
+        $('[data-toggle="popover"]').popover();
+        $("#liveToastBtn").click(function(){
+          $('.toast').toast('show');
         });
-        
-          $('.tooltipped').tooltip();
-          $('.modal').modal();
-          $('.sidenav').sidenav();
-          $('.materialboxed').materialbox();
-          $(".soy").click(function () {
+          $("#soy").click(function () {
               $('html, body').animate({
                   scrollTop: $("#quiensoy").offset().top
               }, 1500);
           });
 
-          $(".down").click(function () {
+          $("#down").click(function () {
               $('html, body').animate({
                   scrollTop: $("#habilidades").offset().top
               }, 1500);
           });
 
-          $(".down1").click(function () {
+          $("#down1").click(function () {
               $('html, body').animate({
                   scrollTop: $("#framework").offset().top
               }, 1500);
           });
 
-          $(".down2").click(function () {
+          $("#down2").click(function () {
               $('html, body').animate({
                   scrollTop: $("#proyecto").offset().top
               }, 1500);
           });
 
-          $(".down3").click(function () {
-              $('html, body').animate({
-                  scrollTop: $("#habilidades").offset().top
-              }, 1500);
-          });
-
-          $(".down4").click(function () {
-              $('html, body').animate({
-                  scrollTop: $("#framework").offset().top
-              }, 1500);
-          });
-
-          $(".down5").click(function () {
-              $('html, body').animate({
-                  scrollTop: $("#proyecto").offset().top
-              }, 1500);
-          });
       });
   }
-  
 }

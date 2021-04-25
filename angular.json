@@ -33,10 +33,11 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/wps/css/materialize.min.css"
+              "src/wps/css/bootstrap.min.css"
             ],
             "scripts": [
-              "src/wps/js/materialize.min.js"
+              "src/wps/js/bootstrap.min.js",
+              "src/wps/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {

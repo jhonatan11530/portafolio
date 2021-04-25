@@ -1,172 +1,269 @@
 <!--- FILA 1 PROYECTOS -->
-<div class="row">
-    <div class="col s12 m4 ">
-        <div class="card" style="width: 100%; height: 400px;">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img}}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><strong>{{title}}</strong><i
-                        class="material-icons right">settings</i></span>
-                <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
-                <p><a>{{ESTRUCTURA}}</a> - <a>{{CSS3}}</a> -
-                    <a>{{JavaScript}}</a> - <a>{{Materialize}}</a>
-                </p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><strong>{{title}}</strong><i
-                        class="material-icons right">close</i></span>
-                <p>{{ 'proyectos.descripcion' | translate }}</p>
-                <a class="{{btn}}" href="{{link}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate }}</a>
-                <br><br>
-                <a class="{{btn}}" [attr.href]="url" target="_blank">
-                    {{ 'proyectos.ver.page' | translate }}
-                </a>
+<div class="row" style="width: 100%;">
+
+    <div class="card" style="width: 21rem;">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img}}">
+        </div>
+        <div class="card-body">
+            <span class="card-title">
+                <h3><strong>{{title}}</strong></h3>
+            </span><br>
+            <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
+            <p style="{{STYLES}}"> <a>{{ESTRUCTURA}}</a> - <a>{{CSS3}}</a> -
+                <a>{{JavaScript}}</a> - <a>{{Materialize}}</a>
+            </p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="project" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><strong>{{ 'proyectos.descripcion' | translate
+                                }}</strong></h5>
+                    </div>
+                    <div class="modal-body">
+                        <p><a class="{{btn}}" href="{{link}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate
+                                }}</a>
+                            <br><br>
+                            <a class="{{btn}}" [attr.href]="url" target="_blank">
+                                {{ 'proyectos.ver.page' | translate }}
+                            </a>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#project">Más Informacion</a>
     </div>
 
-    <div class="col s12 m4 ">
-        <div class="card" style="width: 100%; height: 400px;">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_0}}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><strong>{{title_0}}</strong><i
-                        class="material-icons right">settings</i></span>
-                <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
-                <p><a>{{ESTRUCTURA_0}}</a> - <a>{{CSS3_0}}</a> -
-                    <a>{{JavaScript_0}}</a> - <a>{{Materialize_0}}</a>
-                </p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><strong>{{title_0}}</strong><i
-                        class="material-icons right">close</i></span>
-                <p>{{ 'proyectos.descripcion' | translate }}</p>
-                <a class="{{btn}}" href="{{link_0}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate }}</a>
-                <br><br>
-                <a class="{{btn}}" [attr.href]="url_0" target="_blank">
-                    {{ 'proyectos.ver.page' | translate }}
-                </a>
+    <div class="card" style="width: 21rem;">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_0}}">
+        </div>
+        <div class="card-body">
+            <span class="card-title">
+                <h3><strong>{{title_0}}</strong></h3>
+            </span><br>
+            <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
+            <p style="{{STYLES}}"><a>{{ESTRUCTURA_0}}</a> - <a>{{CSS3_0}}</a> -
+                <a>{{JavaScript_0}}</a> - <a>{{Materialize_0}}</a>
+            </p>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="project1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><strong>{{ 'proyectos.descripcion' | translate
+                                }}</strong></h5>
+                    </div>
+                    <div class="modal-body">
+                        <p><a class="{{btn}}" href="{{link_0}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate
+                                }}</a>
+                            <br><br>
+                            <a class="{{btn}}" [attr.href]="url_0" target="_blank">
+                                {{ 'proyectos.ver.page' | translate }}
+                            </a>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#project1">Más Informacion</a>
     </div>
 
-    <div class="col s12 m4 ">
-        <div class="card" style="width: 100%; height: 400px;">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_1}}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><strong>{{title_1}}</strong><i
-                        class="material-icons right">settings</i></span>
-                <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
-                <p><a>{{ESTRUCTURA_1}}</a> - <a>{{CSS3_1}}</a> -
-                    <a>{{JavaScript_1}}</a> - <a>{{Materialize_1}}</a>
-                </p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><strong>{{title_1}}</strong><i
-                        class="material-icons right">close</i></span>
-                <p>{{ 'proyectos.descripcion' | translate }}</p>
-                <a class="{{btn}}" href="{{link_1}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate }}</a>
+    <div class="card" style="width: 21rem;">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_1}}">
+        </div>
+        <div class="card-body">
+            <span class="card-title">
+                <h3><strong>{{title_1}}</strong></h3>
+            </span><br>
+            <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
+            <p style="{{STYLES}}"><a>{{ESTRUCTURA_1}}</a> - <a>{{CSS3_1}}</a> -
+                <a>{{JavaScript_1}}</a> - <a>{{Materialize_1}}</a>
+            </p>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="project2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><strong>{{ 'proyectos.descripcion' | translate
+                                }}</strong></h5>
+                    </div>
+                    <div class="modal-body">
+                        <p><a class="{{btn}}" href="{{link_1}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate
+                                }}</a>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#project2">Más Informacion</a>
     </div>
 </div>
 <!--- FILA 2 PROYECTOS -->
-<div class="row">
-    <div class="col s12 m4 ">
-        <div class="card" style="width: 100%; height: 400px;">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_2}}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><strong>{{title_2}}</strong><i
-                        class="material-icons right">settings</i></span>
-                <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
-                <p><a>{{ESTRUCTURA_2}}</a> - <a>{{CSS3_2}}</a> -
-                    <a>{{JavaScript_2}}</a> - <a>{{Materialize_2}}</a>
-                </p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><strong>{{title_2}}</strong><i
-                        class="material-icons right">close</i></span>
-                <p>{{ 'proyectos.descripcion' | translate }}</p>
-                <a class="{{btn}}" href="{{link_2}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate }}</a>
+<div class="row" style="width: 100%;">
+
+    <div class="card" style="width: 21rem;">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_2}}">
+        </div>
+        <div class="card-body">
+            <span class="card-title activator grey-text text-darken-4">
+                <h3><strong>{{title_2}}</strong></h3>
+            </span><br>
+            <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
+            <p style="{{STYLES}}"><a>{{ESTRUCTURA_2}}</a> - <a>{{CSS3_2}}</a> -
+                <a>{{JavaScript_2}}</a> - <a>{{Materialize_2}}</a>
+            </p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="project3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><strong>{{ 'proyectos.descripcion' | translate
+                                }}</strong></h5>
+                    </div>
+                    <div class="modal-body">
+                        <p><a class="{{btn}}" href="{{link_2}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate
+                                }}</a>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#project3">Más Informacion</a>
     </div>
 
-    <div class="col s12 m4 ">
-        <div class="card" style="width: 100%; height: 400px;">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_3}}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><strong>{{title_3}}</strong><i
-                        class="material-icons right">settings</i></span>
-                <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
-                <p><a>{{ESTRUCTURA_3}}</a> - <a>{{CSS3_3}}</a> -
-                    <a>{{JavaScript_3}}</a> - <a>{{Materialize_3}}</a>
-                </p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><strong>{{title_3}}</strong><i
-                        class="material-icons right">close</i></span>
-                <p>{{ 'proyectos.descripcion' | translate }}</p>
-                <a class="{{btn}}" href="{{link_3}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate }}</a>
-                <br><br>
-                <a class="{{btn}}" [attr.href]="url_3" target="_blank">
-                    {{ 'proyectos.ver.page' | translate }}
-                </a>
+    <div class="card" style="width: 21rem;">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_3}}">
+        </div>
+        <div class="card-body">
+            <span class="card-title activator grey-text text-darken-4">
+                <h3><strong>{{title_3}}</strong></h3>
+            </span><br>
+            <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
+            <p style="{{STYLES}}"><a>{{ESTRUCTURA_3}}</a> - <a>{{CSS3_3}}</a> -
+                <a>{{JavaScript_3}}</a> - <a>{{Materialize_3}}</a>
+            </p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="project4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><strong>{{ 'proyectos.descripcion' | translate
+                                }}</strong></h5>
+                    </div>
+                    <div class="modal-body">
+                        <a class="{{btn}}" href="{{link_3}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate
+                            }}</a>
+                        <br><br>
+                        <a class="{{btn}}" [attr.href]="url_3" target="_blank">
+                            {{ 'proyectos.ver.page' | translate }}
+                        </a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#project4">Más Informacion</a>
     </div>
 
-    <div class="col s12 m4 ">
-        <div class="card" style="width: 100%; height: 400px;">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_4}}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><strong>{{title_4}}</strong><i
-                        class="material-icons right">settings</i></span>
-                <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
-                <p><a>{{ESTRUCTURA_4}}</a> - <a>{{CSS3_4}}</a> -
-                    <a>{{JavaScript_4}}</a> - <a>{{Materialize_4}}</a>
-                </p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><strong>{{title_4}}</strong><i
-                        class="material-icons right">close</i></span>
-                <p>{{ 'proyectos.descripcion' | translate }}</p>
-                <a class="{{btn}}" href="{{link_4}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate }}</a>
+    <div class="card" style="width: 21rem;">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_4}}">
+        </div>
+        <div class="card-body">
+            <span class="card-title activator grey-text text-darken-4">
+                <h3><strong>{{title_4}}</strong></h3>
+            </span><br>
+            <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
+            <p style="{{STYLES}}"><a>{{ESTRUCTURA_4}}</a> - <a>{{CSS3_4}}</a> -
+                <a>{{JavaScript_4}}</a> - <a>{{Materialize_4}}</a>
+            </p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="project5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><strong>{{ 'proyectos.descripcion' | translate
+                                }}</strong></h5>
+                    </div>
+                    <div class="modal-body">
+                        <a class="{{btn}}" href="{{link_4}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate
+                            }}</a>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#project5">Más Informacion</a>
     </div>
+
 </div>
 <!--- FILA 2 PROYECTOS -->
-<div class="row">
-    <div class="col s12 m4 ">
-        <div class="card" style="width: 100%; height: 400px;">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_5}}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><strong>{{title_5}}</strong><i
-                        class="material-icons right">settings</i></span>
-                <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
-                <p><a>{{ESTRUCTURA_5}}</a> - <a>{{CSS3_5}}</a> -
-                    <a>{{JavaScript_5}}</a> - <a>{{Materialize_5}}</a>
-                </p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><strong>{{title_5}}</strong><i
-                        class="material-icons right">close</i></span>
-                <p>{{ 'proyectos.descripcion' | translate }}</p>
-                <a class="{{btn}}" href="{{link_5}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate }}</a>
+<div class="row" style="width: 100%;">
+
+    <div class="card" style="width: 21rem;">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img loading="lazy" class="activator" style="width: 100%; height: 180px;" src="{{img_5}}">
+        </div>
+        <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+                <h3><strong>{{title_5}}</strong></h3>
+            </span><br>
+            <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
+            <p style="{{STYLES}}"><a>{{ESTRUCTURA_5}}</a> - <a>{{CSS3_5}}</a> -
+                <a>{{JavaScript_5}}</a> - <a>{{Materialize_5}}</a>
+            </p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="project6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><strong>{{ 'proyectos.descripcion' | translate
+                                }}</strong></h5>
+                    </div>
+                    <div class="modal-body">
+                        <a class="{{btn}}" href="{{link_5}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate
+                            }}</a>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#project6">Más Informacion</a>
     </div>
+
 </div>

@@ -1,234 +1,247 @@
 <!--- NAVBAR -->
-<nav id="navbar" class="light-blue nav-extended">
-  <div class="nav-wrapper">
-      <a href="#" class="brand-logo"><img style="height: 55px;" src="assets/img/portafolio.svg "></a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="soy" routerLinkActive="active">{{ 'quien.soy' | translate }}</a></li>
-          <li><a class="down" routerLinkActive="active">{{ 'Habilidades' | translate }}</a></li>
-          <li><a class="down1" routerLinkActive="active">{{ 'Framework' | translate }}</a></li>
-          <li><a class="down2" routerLinkActive="active">{{ 'Proyectos' | translate }}</a></li>
-      </ul>
-  </div>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-white">
+    <a class="navbar-brand"><img style="height: 55px;" src="assets/img/portafolio.svg "></a>
 </nav>
-<ul class="sidenav" id="mobile-demo">
-  <li><img src="assets/img/programador.jpg" style="width: 100%; height: 100%;"></li>
-  <li><a class="soy">{{ 'quien.soy' | translate }}</a></li>
-  <li><div class="divider"></div></li>
-  <li><a class="down">{{ 'Habilidades' | translate }}</a></li>
-  <li><div class="divider"></div></li>
-  <li><a class="down1">{{ 'Framework' | translate }}</a></li>
-  <li><div class="divider"></div></li>
-  <li><a class="down2">{{ 'Proyectos' | translate }}</a></li>
-  <li><div class="divider"></div></li>
-</ul>
-<!-- Modal Structure -->
-<div id="modal1" class="modal bottom-sheet">
-  <h3 class="center">{{ 'Language.title' | translate }}</h3>
-  <div class="container center-align">
-      <div class="row">
-          <div class="col s12">
-              <div class="row">
 
-                  <div class="col m4 s12">
-                     <a (click)="useLanguage('es')" class="tooltipped" data-position="top" data-tooltip="Spanish"><img loading="lazy" src="assets/Language/spanish.svg" style="width: 100px; height: 100px;" /></a>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
+    <div class="collapse navbar-collapse">
+        <div class="navbar-nav">
+            <a href="#" class="nav-link active" id="soy" routerLinkActive="active">{{ 'quien.soy' | translate }}</a>
+            <a href="#" class="nav-link active" id="down" routerLinkActive="active">{{ 'Habilidades' | translate }}</a>
+            <a href="#" class="nav-link active" id="down1" routerLinkActive="active">{{ 'Framework' | translate }}</a>
+            <a href="#" class="nav-link active" id="down2" routerLinkActive="active">{{ 'Proyectos' | translate }}</a>
+        </div>
+    </div>
+    <a href="#modal1" type="button" class="btn btn-outline-light mr-sm-2" data-toggle="modal">{{
+        'BIENVENIDO.boton.Idioma' |
+        translate }}</a>
+    <a href="#contacto" type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal">{{
+        'BIENVENIDO.boton.contacto'
+        | translate }}</a>
+</nav>
 
-                  </div>
+<div class="parallax"></div>
 
-                  <div class="col m4 s12">
-                      <p><a class="tooltipped modal-trigger" data-position="top" data-tooltip="Other Languages"
-                              href="#LanguageOther"><img loading="lazy" src="assets/Language/worldwide.svg"
-                                  style="width: 100px; height: 100px;" /></a>
-                      </p>
-                  </div>
-
-                  <div class="col m4 s12">
-                      <p><a (click)="useLanguage('en')" class="tooltipped" data-position="top" data-tooltip="English"><img loading="lazy" src="assets/Language/english.svg" style="width: 100px; height: 100px;" /></a>
-                      </p>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat"><strong>{{ 'SALIR' | translate }}</strong></a>
-  </div>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">{{ 'BIENVENIDO' | translate }}</h1>
+        <p class="lead">Bienvenido al Portafolio de jhonatan fernandez muñoz</p>
+        <p class="lead">en este portafolio encontraras experiencia
+            laboral,habilidades tecnológicas y Proyectos realizados</p>
+        <hr class="my-4">
+    </div>
 </div>
-<!-- Modal Structure other Language-->
-<div id="LanguageOther" class="modal">
-  <div class="modal-content">
-      <h4 class="black-text center">other languages</h4>
-      <h5 class="black-text">Spanish</h5>
-      <p>EN OTRO IDIOMA NO ESTA DISPONIBLE</p>
-      <div class="divider"></div>
-      <h5 class="black-text">English</h5>
-      <p>IN ANOTHER LANGUAGE IS NOT AVAILABLE</p>
-  </div>
-  <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
-  </div>
+
+<!-- Toast Lenguaje-->
+<div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
+        <div class="toast-header">
+            <span class="material-icons">check_circle_outline</span>
+            <strong class="mr-auto">{{ 'Language.toast.title' | translate }}</strong>
+        </div>
+        <div class="toast-body">
+            <div class="alert alert-success" role="alert">
+                {{ 'Language.toast.descripcion' | translate }}
+            </div>
+        </div>
+    </div>
 </div>
-<!-- Button Floating-->
-<div class="fixed-action-btn toolbar">
-  <a class="btn-floating btn-large blue pulse">
-    <i class="large material-icons">contacts</i>
-  </a>
-  <ul>
-    <li class="waves-effect waves-light"><a href="tel:+573114360830"><i class="material-icons">phone</i></a></li>
-    <li class="waves-effect waves-light"><a
-        href="https://api.whatsapp.com/send?phone=573114360830" target="_blank"><i
-          class="material-icons">phone_android</i></a></li>
-    <li class="waves-effect waves-light"><a href="mailto:jhonatan1153@hotmail.com.com"><i
-          class="material-icons">email</i></a></li>
-    <li class="waves-effect waves-light"><a href="https://www.facebook.com/jhonatan.fernandez.munos/" target="_blank"><i class="material-icons">facebook</i></a></li>
-  </ul>
+
+<!-- Modal Lenguaje-->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{ 'Language.title' | translate }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container center-align">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="col m5 s12">
+                                    <a (click)="useLanguage('es')" data-container="body" data-toggle="popover"
+                                        data-placement="top" data-trigger="hover" data-content="Spanish"><img
+                                            loading="lazy" src="assets/Language/spanish.svg"
+                                            style="width: 100px; height: 100px;" id="liveToastBtn" /></a>
+                                </div>
+
+                                <div class="col m5 s12">
+                                    <a (click)="useLanguage('en')" data-container="body" data-toggle="popover"
+                                        data-placement="top" data-trigger="hover" data-content="English"><img
+                                            loading="lazy" src="assets/Language/english.svg"
+                                            style="width: 100px; height: 100px;" id="liveToastBtn" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ 'SALIR' | translate }}</button>
+            </div>
+        </div>
+    </div>
 </div>
-<!--- BIENVENIDO  -->
-<div class="parallax-container center valign-wrapper">
-  <div class="container">
-      <div class="row">
-          <div class="col s12 white-text">
-              <section id="bloque3">
-                  <h2>{{ 'BIENVENIDO' | translate }}</h2>
-                  <h4>
-                      <a href="#" data-target="slide-out" class="sidenav-trigger btn blue">{{ 'BIENVENIDO.boton.contacto' | translate }}</a><br>
-                      <a href="#modal1" class=" modal-trigger sidenav-trigger btn blue">{{ 'BIENVENIDO.boton.Idioma' | translate }}</a>
-                  </h4>
-              </section>
-          </div>
-      </div>
-  </div>
-  <div class="parallax" style="text-align: center;"></div>
+
+<!-- Modal Contacto-->
+<div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{ 'DATOS.DE.CONTACTO' | translate }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <a class="btn btn-primary" href="mailto:jhonatan1153@hotmail.com"><img src="assets/img/email.png"
+                        style="width: 30px; height: 30px;"> CORREO ELECTRONICO</a>
+                <div class="divider"></div>
+                <p></p>
+                <a class="btn btn-primary" href="https://www.facebook.com/jhonatan.fernandez.munos/"
+                    target="_blanck"><img src="assets/img/facebook.png" style="width: 30px; height: 30px;"> FACEBOOK</a>
+                <div class="divider"></div>
+                <p></p>
+                <a class="btn btn-primary" href="https://www.instagram.com/jhonatan.fernandez/" target="_blanck"><img
+                        src="assets/img/instagram.png" style="width: 30px; height: 30px;"> INSTAGRAM</a>
+                <div class="divider"></div>
+                <p></p>
+                <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=573114360830/"
+                    target="_blanck"><img src="assets/img/whatsapp.png" style="width: 30px; height: 30px;"> WHATSAPP</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ 'SALIR' | translate }}</button>
+            </div>
+        </div>
+    </div>
 </div>
-<!--- REDES SOCIALES Y CONTACTO PERSONAL SIDENAV -->
-<ul id="slide-out" class="sidenav">
-  <li>
-      <div class="user-view">
-          <div class="background">
-              <img src="assets/img/programador.jpg" style="width: 100%; height: 100%;">
-          </div>
-          <a><img class="circle" src="assets/img/yo.jpg"></a>
-          <a><span class="white-text"><strong>{{ 'sobre.mi.nombre' | translate }}</strong></span></a>
-      </div>
-  </li>
-  <li><a>{{ 'DATOS.DE.CONTACTO' | translate }}</a></li>
-  <li>
-      <div class="divider"></div>
-  </li>
-  <li><a href="mailto:jhonatan1153@hotmail.com"><i class="material-icons">mail</i><span
-              class="black-text email">jhonatan1153@hotmail.com</span></a></li>
-  <li><a href="https://www.facebook.com/jhonatan.fernandez.munos/" target="_blanck"><img align="center"
-              src="assets/img/facebook.png" style="width: 30px; height: 30px;"> FACEBOOK</a></li>
-  <li><a href="https://www.instagram.com/jhonatan.fernandez/" target="_blanck"><img align="center"
-              src="assets/img/instagram.png" style="width: 30px; height: 30px;"> INSTAGRAM</a></li>
-  <li><a href="https://api.whatsapp.com/send?phone=573114360830" target="_blanck"><img align="center"
-              src="assets/img/whatsapp.png" style="width: 30px; height: 30px;"> WHATSAPP</a></li>
-  <li><a href="tel:+573114360830"><img align="center" src="assets/img/telefono.png"
-              style="width: 30px; height: 30px;">
-          TELEFONO</a></li>
-</ul>
+
 <!--- PRESENTACION PERSONAL Y PERFIL PROFESIONAL  -->
 <div class="container ">
-  <div class="section">
-      <div class="row ">
-          <h3>
-              <p style="text-align: center;" id="quiensoy">{{ 'sobre.mi' | translate }}</p>
-          </h3>
-          <div class="col s11 m6">
-              <img height="100%" width="100%" src="assets/img/yo.jpg">
-          </div>
+    <div class="section">
+        <h3>
+            <p style="text-align: center;" id="quiensoy">{{ 'sobre.mi' | translate }}</p>
+        </h3>
+        <div class="row ">
 
-          <div class="col s12 m6" style=" font-family:Arial">
-              <h2 class="center blue-text lighten-2"></h2>
-              <h5><strong>{{ 'sobre.mi.nombre.es' | translate }}</strong></h5>
-              <strong>{{ 'sobre.mi.nombre' | translate }}</strong>
-              <p class="light">{{ 'sobre.mi.descripcion' | translate }}</p>
-              <h5><strong>{{ 'sobre.perfil.profecional' | translate }}</strong></h5>
-              <p class="light">{{ 'sobre.mi.perfil.profecional.descripcion' | translate }}</p>
-              <a class="btn center blue white-text" href="assets/HV/Hoja de Vida.pdf" target="_blank"><i
-                      class="material-icons right">file_download</i>{{ 'DESCARGA.HV' | translate }}</a>
-          </div>
-      </div>
-  </div>
+            <div class="col-sm-6">
+                <img height="100%" width="100%" src="assets/img/yo.jpg">
+            </div>
+
+            <div class="col-sm-6" style=" font-family:Arial">
+                <h2 class="center blue-text lighten-2"></h2>
+                <h5><strong>{{ 'sobre.mi.nombre.es' | translate }}</strong></h5>
+                <strong>{{ 'sobre.mi.nombre' | translate }}</strong>
+                <p class="light">{{ 'sobre.mi.descripcion' | translate }}</p>
+                <h5><strong>{{ 'sobre.perfil.profecional' | translate }}</strong></h5>
+                <p class="light">{{ 'sobre.mi.perfil.profecional.descripcion' | translate }}</p>
+                <a class="btn btn-primary" href="assets/HV/Hoja de Vida.pdf" target="_blank"><span
+                        class="material-icons">download</span>{{ 'DESCARGA.HV' | translate }}</a>
+            </div>
+        </div>
+    </div>
 </div>
+
 <!---  DOCUMENTACION --->
 <div class="container center-align">
-  <div class="section">
-      <div class="row">
-          <div class="col s12">
-              <h3>
-                  <p style="text-align: center;">{{ 'Certificaciones' | translate }}</p>
-              </h3>
-              <div class="row">
-                  <app-certificaciones [DataEntrante]='card' *ngFor='let card of Certificaciones'>
-                  </app-certificaciones>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>
+                    <p style="text-align: center;">{{ 'Certificaciones' | translate }}</p>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <app-certificaciones [DataEntrante]='card' *ngFor='let card of Certificaciones'>
+            </app-certificaciones>
+        </div>
+    </div>
 </div>
+
 <!---  Habilidades tecnológicas --->
 <div class="container center-align">
-  <div class="section">
-      <div class="row">
-          <div class="col s12">
-
-              <h3>
-                  <p style="text-align: center;" id="habilidades">{{ 'Habilidades.tecnológicas' | translate }}</p>
-              </h3>
-              <div class="row">
-                  <app-card [DataEntrante]='card' *ngFor='let card of habilidad'></app-card>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>
+                    <p style="text-align: center;" id="habilidades">{{ 'Habilidades.tecnológicas' | translate }}</p>
+                </h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <app-card [DataEntrante]='card' *ngFor='let card of habilidad'></app-card>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 <!--- Framework --->
 <div class="container center-align">
-  <div class="section">
-      <div class="row">
-          <div class="col s12">
-              <h3>
-                  <p style="text-align: center;" id="framework">{{ 'Framework' | translate }}</p>
-              </h3>
-              <div class="row">
-                  <app-card [DataEntrante]='card' *ngFor='let card of framework'></app-card>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>
+                    <p style="text-align: center;" id="framework">{{ 'Framework' | translate }}</p>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <app-card [DataEntrante]='card' *ngFor='let card of framework'></app-card>
+        </div>
+    </div>
 </div>
+
 <!--- parallax --->
 <div class="parallax1"></div>
+
 <!--- Proyectos --->
 <div class="container center-align">
-  <div class="section">
-      <div class="row">
-          <div class="col s12">
-              <h3>
-                  <p style="text-align: center;" id="proyecto">{{ 'Proyectos.Realizados' | translate }}</p>
-              </h3>
-              <div class="row">
-                  <app-proyectos></app-proyectos>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>
+                    <p style="text-align: center;" id="proyecto">{{ 'Proyectos.Realizados' | translate }}</p>
+                </h1>
+            </div>
+        </div>
+        <app-proyectos></app-proyectos>
+    </div>
 </div>
+
 <!--- parallax --->
 <div class="parallax2"></div>
-<!--- FOOTER -->
-<footer class="page-footer blue">
-  <div class="container">
-      <div class="row">
-          <div class="col l6 s12">
-              <h5 class="white-text">{{ 'footer.Porfafolio' | translate }}</h5>
-              <p class="grey-text text-lighten-4">{{ 'footer.Porfafolio.descripcion' | translate }}</p>
-          </div>
-      </div>
-  </div>
-  <div class="footer-copyright">
-      <div class="container">
+
+<!-- Footer -->
+<footer class="bg-primary text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase text-white">{{ 'footer.Porfafolio' | translate }}</h5>
+
+                <p class="text-white">
+                    {{ 'footer.Porfafolio.descripcion' | translate }}
+                </p>
+            </div>
+
+        </div>
+        <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.2);">
         {{ 'Copyright' | translate }}
-      </div>
-  </div>
+    </div>
+    <!-- Copyright -->
 </footer>
+<!-- Footer -->

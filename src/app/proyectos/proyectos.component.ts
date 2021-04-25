@@ -10,10 +10,11 @@ export class ProyectosComponent implements OnInit {
   title: String = 'UNIVERSAL DE GRADAS';
   ESTRUCTURA: String = 'HTML5';
   CSS3: String = 'CSS3';
+  STYLES:String ='color: dodgerblue;';
   JavaScript: String = 'JavaScript';
   Materialize: String = 'Materialize';
   link: String = 'https://github.com/jhonatan11530/Universal-de-gradas';
-  btn: String = 'btn blue';
+  btn: String = 'btn btn-primary';
   url: String = 'https://universaldegradas.com/';
   img: String = 'assets/img/universal.png';
   // FILA 1 CARD 2

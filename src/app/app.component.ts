@@ -61,6 +61,10 @@ export class AppComponent implements AfterViewInit, OnInit {
           {
             img: 'assets/img/Certificado Arquic Compu.svg',
             url:'assets/PDF/Certificado Arquic Compu.pdf'
+          },
+          {
+            img: 'assets/img/Certificado Desarrollo de Apps.svg',
+            url:'assets/PDF/Certificado Desarrollo de Apps.pdf'
           }
           
         ]
@@ -76,7 +80,10 @@ export class AppComponent implements AfterViewInit, OnInit {
     ngAfterViewInit() {
       $(document).ready(function () {
         $('[data-toggle="popover"]').popover();
-        $("#liveToastBtn").click(function(){
+        $("#liveToastBtnES").click(function(){
+          $('.toast').toast('show');
+        });
+        $("#liveToastBtnEN").click(function(){
           $('.toast').toast('show');
         });
           $("#soy").click(function () {

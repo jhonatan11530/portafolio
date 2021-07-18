@@ -1,26 +1,40 @@
 <!--- NAVBAR -->
-<nav class="navbar navbar-expand-lg  navbar-dark bg-white">
-    <a class="navbar-brand"><img style="height: 55px;" src="assets/img/portafolio.svg "></a>
-</nav>
-
-<nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
-    <div class="collapse navbar-collapse">
-        <div class="navbar-nav">
-            <a href="#" class="nav-link active" id="soy" routerLinkActive="active">{{ 'quien.soy' | translate }}</a>
-            <a href="#" class="nav-link active" id="down" routerLinkActive="active">{{ 'Habilidades' | translate }}</a>
-            <a href="#" class="nav-link active" id="down1" routerLinkActive="active">{{ 'Framework' | translate }}</a>
-            <a href="#" class="nav-link active" id="down2" routerLinkActive="active">{{ 'Proyectos' | translate }}</a>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Portafolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll">
+            <li>
+                <a href="#" class="nav-link active" id="soy" routerLinkActive="active">{{ 'quien.soy' | translate }}</a>
+            </li>
+            <li>
+                <a href="#" class="nav-link active" id="down" routerLinkActive="active">{{ 'Habilidades' | translate
+                    }}</a>
+            </li>
+            <li>
+                <a href="#" class="nav-link active" id="down1" routerLinkActive="active">{{ 'Framework' | translate
+                    }}</a>
+            </li>
+            <li>
+                <a href="#" class="nav-link active" id="down2" routerLinkActive="active">{{ 'Proyectos' | translate
+                    }}</a>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <a href="#modal1" type="button" class="form-inline btn btn-outline-light mr-2"
+                data-toggle="modal">{{'BIENVENIDO.boton.Idioma' | translate }}</a>
+            <a href="#contacto" type="button" class="form-inline btn btn-outline-light"
+                data-toggle="modal">{{'BIENVENIDO.boton.contacto' | translate }}</a>
+        </form>
     </div>
-    <a href="#modal1" type="button" class="btn btn-outline-light mr-sm-2" data-toggle="modal">{{
-        'BIENVENIDO.boton.Idioma' |
-        translate }}</a>
-    <a href="#contacto" type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal">{{
-        'BIENVENIDO.boton.contacto'
-        | translate }}</a>
 </nav>
 
-<div class="parallax"></div>
+<video loop autoplay width="100%">
+    <source src="assets/img/number_digital_background.mov" type="video/mp4">
+</video>
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
@@ -36,7 +50,7 @@
 <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
     <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
         <div class="toast-header">
-            <span class="material-icons">check_circle_outline</span>
+            <i class="bi bi-check-circle"></i>
             <strong class="mr-auto">{{ 'Language.toast.title' | translate }}</strong>
         </div>
         <div class="toast-body">
@@ -66,14 +80,14 @@
                                     <a (click)="useLanguage('es')" data-container="body" data-toggle="popover"
                                         data-placement="top" data-trigger="hover" data-content="Spanish"><img
                                             loading="lazy" src="assets/Language/spanish.svg"
-                                            style="width: 100px; height: 100px;" id="liveToastBtn" /></a>
+                                            style="width: 100px; height: 100px;" id="liveToastBtnES" /></a>
                                 </div>
 
                                 <div class="col m5 s12">
                                     <a (click)="useLanguage('en')" data-container="body" data-toggle="popover"
                                         data-placement="top" data-trigger="hover" data-content="English"><img
                                             loading="lazy" src="assets/Language/english.svg"
-                                            style="width: 100px; height: 100px;" id="liveToastBtn" /></a>
+                                            style="width: 100px; height: 100px;" id="liveToastBtnEN" /></a>
                                 </div>
                             </div>
                         </div>
@@ -139,8 +153,8 @@
                 <p class="light">{{ 'sobre.mi.descripcion' | translate }}</p>
                 <h5><strong>{{ 'sobre.perfil.profecional' | translate }}</strong></h5>
                 <p class="light">{{ 'sobre.mi.perfil.profecional.descripcion' | translate }}</p>
-                <a class="btn btn-primary" href="assets/HV/Hoja de Vida.pdf" target="_blank"><span
-                        class="material-icons">download</span>{{ 'DESCARGA.HV' | translate }}</a>
+                <a class="btn btn-primary" href="assets/HV/Hoja de Vida.pdf" target="_blank"><i class="bi bi-cloud-arrow-down-fill"></i>{{ 'DESCARGA.HV' |
+                    translate }}</a>
             </div>
         </div>
     </div>

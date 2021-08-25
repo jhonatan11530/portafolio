@@ -1,5 +1,5 @@
 <!--- NAVBAR -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top">
     <a class="navbar-brand" href="#">Portafolio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -147,20 +147,32 @@
                 </button>
             </div>
             <div class="modal-body">
-                <a class="btn btn-primary" href="mailto:jhonatan1153@hotmail.com"><img src="assets/img/email.png"
-                        style="width: 30px; height: 30px;"> CORREO ELECTRONICO</a>
-                <div class="divider"></div>
-                <p></p>
-                <a class="btn btn-primary" href="https://www.facebook.com/jhonatan.fernandez.munos/"
-                    target="_blanck"><img src="assets/img/facebook.png" style="width: 30px; height: 30px;"> FACEBOOK</a>
-                <div class="divider"></div>
-                <p></p>
-                <a class="btn btn-primary" href="https://www.instagram.com/jhonatan.fernandez/" target="_blanck"><img
-                        src="assets/img/instagram.png" style="width: 30px; height: 30px;"> INSTAGRAM</a>
-                <div class="divider"></div>
-                <p></p>
-                <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=573114360830/"
-                    target="_blanck"><img src="assets/img/whatsapp.png" style="width: 30px; height: 30px;"> WHATSAPP</a>
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col mb-3">
+                        <a class="btn btn-primary" href="mailto:jhonatan1153@hotmail.com"><img
+                                src="assets/img/email.svg" style="width: 30px; height: 30px;"> CORREO</a>
+                    </div>
+                    <div class="col mb-3">
+                        <a class="btn btn-primary" href="https://www.facebook.com/jhonatan.fernandez.munos/"
+                            target="_blanck"><img src="assets/img/facebook.svg" style="width: 30px; height: 30px;">
+                            FACEBOOK</a>
+                    </div>
+                    <div class="col mb-3">
+                        <a class="btn btn-primary" href="https://www.instagram.com/jhonatan.fernandez/"
+                            target="_blanck"><img src="assets/img/instagram.svg" style="width: 30px; height: 30px;">
+                            INSTAGRAM</a>
+                    </div>
+                    <div class="col mb-3">
+                        <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=573114360830/"
+                            target="_blanck"><img src="assets/img/whatsapp.svg" style="width: 30px; height: 30px;">
+                            WHATSAPP</a>
+                    </div>
+                    <div class="col mb-3">
+                        <a class="btn btn-primary" href="https://linkedin.com/in/jhonatan-fernandez-muñoz-1681b416b"
+                            target="_blanck"><img src="assets/img/linkedin.svg" style="width: 30px; height: 30px;">
+                            LINKEDIN</a>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ 'SALIR' | translate }}</button>
@@ -189,7 +201,7 @@
                 <h5><strong>{{ 'sobre.perfil.profecional' | translate }}</strong></h5>
                 <p class="light">{{ 'sobre.mi.perfil.profecional.descripcion' | translate }}</p>
                 <a class="btn btn-primary" href="assets/HV/Hoja de Vida.pdf" target="_blank"><i
-                        class="bi bi-cloud-arrow-down-fill"></i>{{ 'DESCARGA.HV' |
+                        class="bi bi-cloud-arrow-down-fill"></i> {{ 'DESCARGA.HV' |
                     translate }}</a>
             </div>
         </div>
@@ -197,7 +209,7 @@
 </div>
 
 <!---  DOCUMENTACION --->
-<div class="container center-align">
+<div class="container center-align mb-4">
     <div class="section">
         <div class="row">
             <div class="col-sm-12">
@@ -214,7 +226,7 @@
 </div>
 
 <!---  Habilidades tecnológicas --->
-<div class="container center-align">
+<div class="container center-align mb-4">
     <div class="section">
         <div class="row">
             <div class="col-sm-12">
@@ -231,9 +243,26 @@
     </div>
 </div>
 
+<!--- CMS --->
+<div class="container center-align mb-4">
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>
+                    <p style="text-align: center;">{{ 'CMS' | translate }}</p>
+                </h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <app-card [DataEntrante]='card' *ngFor='let card of CMS'></app-card>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--- Framework --->
-<div class="container center-align">
+<div class="container center-align mb-4">
     <div class="section">
         <div class="row">
             <div class="col-sm-12">
@@ -248,11 +277,27 @@
     </div>
 </div>
 
+<!--- DataBase --->
+<div class="container center-align mb-4">
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>
+                    <p style="text-align: center;">{{ 'DataBase' | translate }}</p>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <app-card [DataEntrante]='card' *ngFor='let card of Databases'></app-card>
+        </div>
+    </div>
+</div>
+
 <!--- parallax --->
 <div class="parallax1"></div>
 
 <!--- Proyectos --->
-<div class="container center-align">
+<div class="container center-align mb-4">
     <div class="section">
         <div class="row">
             <div class="col-sm-12">
@@ -262,7 +307,7 @@
             </div>
         </div>
         <div class="row">
-            <app-proyectos [DataEntrante]='card' *ngFor='let card of proyectos1'></app-proyectos>
+            <app-proyectos [DataEntrante]='card' *ngFor='let card of proyectos'></app-proyectos>
         </div>
     </div>
 </div>

@@ -17,12 +17,12 @@
                 <p><a class="{{DataEntrante.btn}}" href="{{DataEntrante.link}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate
                 }}</a>
                 <br><br>
-                <ng-container *ngIf="DataEntrante.url; else DataEntrante.url">
+                <ng-container *ngIf="DataEntrante.url; else null">
                     <a class="{{DataEntrante.btn}}" [attr.href]="DataEntrante.url" target="_blank">
                         {{ 'proyectos.ver.page' | translate }}
                         </a>
                 </ng-container>
-                <ng-template #elseTemplate>
+                <ng-template #DataEntrante.url>
                     
                 </ng-template>
                 </p>

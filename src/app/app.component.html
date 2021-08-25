@@ -1,5 +1,5 @@
 <!--- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Portafolio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,20 +31,55 @@
         </form>
     </div>
 </nav>
-
-<video loop autoplay width="100%">
-    <source src="assets/img/number_digital_background.mov" type="video/mp4">
-</video>
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">{{ 'BIENVENIDO' | translate }}</h1>
-        <p class="lead">Bienvenido al Portafolio de jhonatan fernandez muñoz</p>
-        <p class="lead">en este portafolio encontraras experiencia
-            laboral,habilidades tecnológicas y Proyectos realizados</p>
-        <hr class="my-4">
+<div class="prueba position-relative overflow-hidden text-center bg-light">
+    <div class="col-md-4 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">{{ 'BIENVENIDO' | translate }}</h1>
+        <p class="lead font-weight-normal">Bienvenido al Portafolio de jhonatan fernandez muñoz. en este portafolio
+            encontraras experiencia laboral,habilidades tecnológicas y Proyectos realizados.</p>
     </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
+<style>
+    .prueba {
+        position: relative;
+        text-align: center;
+        height: 100vh;
+        background: linear-gradient(to right, #50aeec, #4eb7fd);
+        color: #fff;
+    }
+
+    .product-device {
+        position: absolute;
+        right: 10%;
+        bottom: -30%;
+        width: 300px;
+        height: 540px;
+        background-color: #333;
+        border-radius: 21px;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    .product-device::before {
+        position: absolute;
+        top: 10%;
+        right: 10px;
+        bottom: 10%;
+        left: 10px;
+        content: "";
+        background-color: rgba(255, 255, 255, .1);
+        border-radius: 5px;
+    }
+
+    .product-device-2 {
+        top: -25%;
+        right: auto;
+        bottom: 0;
+        left: 5%;
+        background-color: #e5e5e5;
+    }
+</style>
 
 <!-- Toast Lenguaje-->
 <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
@@ -153,7 +188,8 @@
                 <p class="light">{{ 'sobre.mi.descripcion' | translate }}</p>
                 <h5><strong>{{ 'sobre.perfil.profecional' | translate }}</strong></h5>
                 <p class="light">{{ 'sobre.mi.perfil.profecional.descripcion' | translate }}</p>
-                <a class="btn btn-primary" href="assets/HV/Hoja de Vida.pdf" target="_blank"><i class="bi bi-cloud-arrow-down-fill"></i>{{ 'DESCARGA.HV' |
+                <a class="btn btn-primary" href="assets/HV/Hoja de Vida.pdf" target="_blank"><i
+                        class="bi bi-cloud-arrow-down-fill"></i>{{ 'DESCARGA.HV' |
                     translate }}</a>
             </div>
         </div>
@@ -225,7 +261,9 @@
                 </h1>
             </div>
         </div>
-        <app-proyectos></app-proyectos>
+        <div class="row">
+            <app-proyectos [DataEntrante]='card' *ngFor='let card of proyectos1'></app-proyectos>
+        </div>
     </div>
 </div>
 

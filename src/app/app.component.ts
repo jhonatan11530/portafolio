@@ -7,7 +7,7 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  public habilidad: Array<any> = []; framework: Array<any> = [];Certificaciones: Array<any> = [];
+  public habilidad: Array<any> = []; framework: Array<any> = [];Certificaciones: Array<any> = []; proyectos1:Array<any> = [];
     
   // ngOnInit EJECUTA ARRAY
     ngOnInit(): void {
@@ -67,6 +67,100 @@ export class AppComponent implements AfterViewInit, OnInit {
             url:'assets/PDF/Certificado Desarrollo de Apps.pdf'
           }
           
+        ]
+        this.proyectos1=[
+          {
+            title:'UNIVERSAL DE GRADAS',
+            Estructura:'HTML5',
+            Css:'Css',
+            Style:'color: dodgerblue;',
+            JavaScript:'JavaScript',
+            Materialize:'Materialize',
+            link:'https://github.com/jhonatan11530/Universal-de-gradas',
+            btn:'btn btn-primary',
+            url:'https://universaldegradas.com/',
+            img:'assets/img/universal.png',
+            href:'Collapse'
+
+          },
+          {
+            title:'INARDEK',
+            Estructura:'WordPress',
+            Css:'Css',
+            Style:'color: dodgerblue;',
+            JavaScript:'JavaScript',
+            Materialize:'Bootstrap',
+            link:'https://github.com/juniorwilson/inardek',
+            btn:'btn btn-primary',
+            url:'https://inardek.com/',
+            img:'assets/img/inardek.png',
+            href:'Collapse1'
+          },
+          {
+            title:'MAINCO APP WEB',
+            Estructura:'LARAVEL',
+            Css:'HTML5',
+            Style:'color: dodgerblue;',
+            JavaScript:'JavaScript',
+            Materialize:'Bootstrap',
+            link:'https://github.com/jhonatan11530/Mainco_Health_APP_Web',
+            btn:'btn btn-primary',
+            url:'',
+            img:'assets/img/mainco.jpg',
+            href:'Collapse2'
+          },
+          {
+            title:'MAINCO APP MOVIL',
+            Estructura:'JAVA',
+            Css:'Material Design',
+            Style:'color: dodgerblue;',
+            JavaScript:'PHP',
+            Materialize:'API REST FULL',
+            link:'https://github.com/jhonatan11530/Mainco_Health_APP_Movil',
+            btn:'btn btn-primary',
+            url:'',
+            img:'assets/img/mainco.jpg',
+            href:'Collapse3'
+          },
+          {
+            title:'MULTIGRADAS',
+            Estructura:'WordPress',
+            Css:'HTML5',
+            Style:'color: dodgerblue;',
+            JavaScript:'JavaScript',
+            Materialize:'Bootstrap',
+            link:'https://github.com/jhonatan11530/multigradas',
+            btn:'btn btn-primary',
+            url:'https://multigradas.com.co/',
+            img:'assets/img/multigradas.jpg',
+            href:'Collapse4'
+          },
+          {
+            title:'MAINCO APP CALIDAD',
+            Estructura:'C#',
+            Css:'SQL SERVER',
+            Style:'color: dodgerblue;',
+            JavaScript:'API Office Interop Excel',
+            Materialize:'',
+            link:'https://github.com/jhonatan11530/Mainco-Indicador-de-acciones-Calidad',
+            btn:'btn btn-primary',
+            url:'',
+            img:'assets/img/mainco.jpg',
+            href:'Collapse5'
+          },
+          {
+            title:'MAINCO APP GESTION HUMANA',
+            Estructura:'C#',
+            Css:'SQL SERVER',
+            Style:'color: dodgerblue;',
+            JavaScript:'API Office Interop Excel',
+            Materialize:'',
+            link:'https://github.com/jhonatan11530/Mainco-GH-Incapacidades-medica',
+            btn:'btn btn-primary',
+            url:'',
+            img:'assets/img/mainco.jpg',
+            href:'Collapse6'
+          }
         ]
   } 
   useLanguage(language: string): void {

@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Input } from '@angular/core';
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
+  @Input() DataEntrante:any;
+  /*
   // FILA 1 CARD 1
   title: String = 'UNIVERSAL DE GRADAS';
   ESTRUCTURA: String = 'HTML5';
@@ -71,7 +73,8 @@ export class ProyectosComponent implements OnInit {
   JavaScript_5: String = 'API Office Interop Excel';
   Materialize_5: String = '';
   link_5: String = 'https://github.com/jhonatan11530/Mainco-GH-Incapacidades-medica';
-  img_5: String = 'assets/img/mainco.jpg';
+  img_5: String = 'assets/img/mainco.jpg';*/
+
   constructor() { }
 
   ngOnInit(): void {

@@ -31,55 +31,13 @@
         </form>
     </div>
 </nav>
-<div class="prueba position-relative overflow-hidden text-center bg-light">
-    <div class="col-md-4 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal">{{ 'BIENVENIDO' | translate }}</h1>
-        <p class="lead font-weight-normal">Bienvenido al Portafolio de jhonatan fernandez muñoz. en este portafolio
-            encontraras experiencia laboral,habilidades tecnológicas y Proyectos realizados.</p>
+
+<div class="parallax4 mb-5">
+    <div class="text-center" style="padding: 150px; color: white;">
+        <h1>{{ 'BIENVENIDO' | translate }}</h1>
+        <h3>{{ 'BIENVENIDO.porfolio' | translate }} <br> {{ 'BIENVENIDO.Descripcion' | translate }}</h3>
     </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
-<style>
-    .prueba {
-        position: relative;
-        text-align: center;
-        height: 100vh;
-        background: linear-gradient(to right, #50aeec, #4eb7fd);
-        color: #fff;
-    }
-
-    .product-device {
-        position: absolute;
-        right: 10%;
-        bottom: -30%;
-        width: 300px;
-        height: 540px;
-        background-color: #333;
-        border-radius: 21px;
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    .product-device::before {
-        position: absolute;
-        top: 10%;
-        right: 10px;
-        bottom: 10%;
-        left: 10px;
-        content: "";
-        background-color: rgba(255, 255, 255, .1);
-        border-radius: 5px;
-    }
-
-    .product-device-2 {
-        top: -25%;
-        right: auto;
-        bottom: 0;
-        left: 5%;
-        background-color: #e5e5e5;
-    }
-</style>
 
 <!-- Toast Lenguaje-->
 <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
@@ -130,7 +88,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ 'SALIR' | translate }}</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ 'SALIR' | translate
+                    }}</button>
             </div>
         </div>
     </div>
@@ -150,32 +109,38 @@
                 <div class="row row-cols-1 row-cols-md-2">
                     <div class="col mb-3">
                         <a class="btn btn-success" href="mailto:jhonatan1153@hotmail.com"><img
-                                src="assets/img/email.svg" alt="Error Image" style="width: 30px; height: 30px;"> CORREO</a>
+                                src="assets/img/email.svg" alt="Error Image" style="width: 30px; height: 30px;">
+                            CORREO</a>
                     </div>
                     <div class="col mb-3">
                         <a class="btn btn-success" href="https://www.facebook.com/jhonatan.fernandez.munos/"
-                            target="_blanck"><img src="assets/img/facebook.svg" alt="Error Image" style="width: 30px; height: 30px;">
+                            target="_blanck"><img src="assets/img/facebook.svg" alt="Error Image"
+                                style="width: 30px; height: 30px;">
                             FACEBOOK</a>
                     </div>
                     <div class="col mb-3">
                         <a class="btn btn-success" href="https://www.instagram.com/jhonatan.fernandez/"
-                            target="_blanck"><img src="assets/img/instagram.svg" alt="Error Image" style="width: 30px; height: 30px;">
+                            target="_blanck"><img src="assets/img/instagram.svg" alt="Error Image"
+                                style="width: 30px; height: 30px;">
                             INSTAGRAM</a>
                     </div>
                     <div class="col mb-3">
                         <a class="btn btn-success" href="https://api.whatsapp.com/send?phone=573114360830/"
-                            target="_blanck"><img src="assets/img/whatsapp.svg" alt="Error Image" style="width: 30px; height: 30px;">
+                            target="_blanck"><img src="assets/img/whatsapp.svg" alt="Error Image"
+                                style="width: 30px; height: 30px;">
                             WHATSAPP</a>
                     </div>
-                    <div class="col mb-3"> 
+                    <div class="col mb-3">
                         <a class="btn btn-success" href="https://www.linkedin.com/in/jhonatanfernandezmu%C3%B1oz"
-                            target="_blanck"><img src="assets/img/linkedin.svg" alt="Error Image" style="width: 30px; height: 30px;">
+                            target="_blanck"><img src="assets/img/linkedin.svg" alt="Error Image"
+                                style="width: 30px; height: 30px;">
                             LINKEDIN</a>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ 'SALIR' | translate }}</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ 'SALIR' | translate
+                    }}</button>
             </div>
         </div>
     </div>
@@ -216,6 +181,22 @@
                 <h1>
                     <p style="text-align: center;">{{ 'Certificaciones' | translate }}</p>
                 </h1>
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
+                        <select id="certificadoItem" class="form-control">
+                            <option selected disabled>SELECCIONE CERTIFICACIONES A FILTRAR</option>
+                            <option value="TODO">TODAS LAS CERTIFICACIONES</option>
+                            <option value="SENA">SENA CERTIFICACIONES</option>
+                            <option value="GOOGLE">GOOGLE CERTIFICACIONES</option>
+                            <option value="DATABASE">BASE DE DATOS CERTIFICACIONES</option>
+                            <option value="OTROS">OTRAS CERTIFICACIONES</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -294,7 +275,7 @@
 </div>
 
 <!--- parallax --->
-<div class="parallax1"></div>
+<div class="parallax1 mb-4"></div>
 
 <!--- Proyectos --->
 <div class="container center-align mb-4">

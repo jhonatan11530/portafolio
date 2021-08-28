@@ -1,6 +1,14 @@
+.parallax4 {
+    background-image: url("/assets/img/Presentacion.svg");
+    min-height: 650px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .parallax1 {
     /* The image used */
-    background-image: url("assets/img/parallax-Programming1.jpg");
+    background-image: url("assets/img/parallax-Programming1.svg");
   
     /* Set a specific height */
     min-height: 500px; 
@@ -14,7 +22,7 @@
   
   .parallax2 {
     /* The image used */
-    background-image: url("assets/img/parallax-Programming2.jpg");
+    background-image: url("assets/img/parallax-Programming2.svg");
   
     /* Set a specific height */
     min-height: 500px; 

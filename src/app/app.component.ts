@@ -7,28 +7,33 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  public habilidad: Array<any> = []; framework: Array<any> = []; Certificaciones: Array<any> = []; proyectos: Array<any> = []; Databases: Array<any> = [];CMS: Array<any> = [];
+  public habilidad: Array<any> = []; framework: Array<any> = []; Certificaciones: Array<any> = []; proyectos: Array<any> = []; Databases: Array<any> = []; CMS: Array<any> = [];
 
   // ngOnInit EJECUTA ARRAY
   ngOnInit(): void {
     this.Certificaciones = [
       {
+        filtro: 'SENA',
         img: 'assets/img/Certificado Tecnologo.svg',
         url: 'assets/PDF/Certificado Tecnologo.pdf'
       },
       {
+        filtro: 'SENA',
         img: 'assets/img/Certificado Arquic Compu.svg',
         url: 'assets/PDF/Certificado Arquic Compu.pdf'
       },
       {
+        filtro: 'GOOGLE',
         img: 'assets/img/Certificado Desarrollo de Apps.svg',
         url: 'assets/PDF/Certificado Desarrollo de Apps.pdf'
       },
       {
+        filtro: 'OTROS',
         img: 'assets/img/Certificado Movistar-Wordpress.svg',
         url: 'assets/PDF/Certificado Movistar-Wordpress.pdf'
       },
       {
+        filtro: 'OTROS',
         img: 'assets/img/Certificado Movistar-JavaScript.svg',
         url: 'assets/PDF/Certificado Movistar-JavaScript.pdf'
       }
@@ -70,7 +75,7 @@ export class AppComponent implements AfterViewInit, OnInit {
       }
 
     ]
-    this.CMS=[
+    this.CMS = [
       {
         img: 'assets/img/WordPress.svg'
       }
@@ -91,7 +96,7 @@ export class AppComponent implements AfterViewInit, OnInit {
       {
         img: 'assets/img/ExpressJS.svg'
       }
-      
+
 
     ]
     this.Databases = [
@@ -219,10 +224,10 @@ export class AppComponent implements AfterViewInit, OnInit {
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('es');
   }
-
   // ngAfterViewInit EJECUTA JS Y JQUERY 
   ngAfterViewInit() {
     $(document).ready(function () {
+
       $('[data-toggle="popover"]').popover();
       $("#liveToastBtnES").click(function () {
         $('.toast').toast('show');
@@ -253,7 +258,41 @@ export class AppComponent implements AfterViewInit, OnInit {
           scrollTop: $("#proyecto").offset().top
         }, 1500);
       });
+      $('#certificadoItem').on('change', function () {
+        var data = $("#certificadoItem").val();
 
+        if (data=="TODO"){
+          $('[id=SENA]').show();
+          $('[id=GOOGLE]').show();
+          $('[id=DATABASE]').show();
+          $('[id=OTROS]').show();
+         }
+        if (data == "SENA") {
+          $('[id=SENA]').show();
+          $('[id=GOOGLE]').hide();
+          $('[id=DATABASE]').hide();
+          $('[id=OTROS]').hide();
+        }
+        if (data == "GOOGLE") {
+          $('[id=SENA]').hide();
+          $('[id=GOOGLE]').show();
+          $('[id=DATABASE]').hide();
+          $('[id=OTROS]').hide();
+        }
+        if (data == "DATABASE") {
+          $('[id=SENA]').hide();
+          $('[id=GOOGLE]').hide();
+          $('[id=DATABASE]').show();
+          $('[id=OTROS]').hide();
+        }
+        if (data == "OTROS") {
+          $('[id=SENA]').hide();
+          $('[id=GOOGLE]').hide();
+          $('[id=DATABASE]').hide();
+          $('[id=OTROS]').show();
+        }
+
+      });
     });
   }
 }

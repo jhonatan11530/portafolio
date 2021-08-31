@@ -72,6 +72,9 @@ export class AppComponent implements AfterViewInit, OnInit {
       },
       {
         img: 'assets/img/Git.svg'
+      },
+      {
+        img: 'assets/img/github.svg'
       }
 
     ]

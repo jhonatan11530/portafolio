@@ -1,33 +1,36 @@
-<div class="card text-center" style="width: 21rem;">
-    <div class="card-image waves-effect waves-block waves-light">
-        <img loading="lazy" class="activator" style="width: 100%; height: 180px;" [src]="DataEntrante.img">
-    </div>
-    <div class="card-body">
-        <span class="card-title">
-            <h3><strong>{{DataEntrante.title}}</strong></h3>
-        </span><br>
-        <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
-        <p [style]="DataEntrante.Style"> <a>{{DataEntrante.Estructura}}</a> - <a>{{DataEntrante.Css}}</a> -
-            <a>{{DataEntrante.JavaScript}}</a> - <a>{{DataEntrante.Materialize}}</a>
-        </p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#{{DataEntrante.href}}" role="button" aria-expanded="false" aria-controls="collapseExample">Más Informacion</a>
-        <div class="collapse" id="{{DataEntrante.href}}">
-            <div class="card-body">
-                <h5><strong>{{ 'proyectos.descripcion' | translate}}</strong></h5>
-                <p><a class="{{DataEntrante.btn}}" href="{{DataEntrante.link}}" target="_blank">{{ 'proyectos.ver.proyecto' | translate
-                }}</a>
-                <br><br>
-                <ng-container *ngIf="DataEntrante.url; else null">
-                    <a class="{{DataEntrante.btn}}" [attr.href]="DataEntrante.url" target="_blank">
-                        {{ 'proyectos.ver.page' | translate }}
-                        </a>
-                </ng-container>
-                <ng-template #DataEntrante.url>
-                    
-                </ng-template>
-                </p>
+<div class="col">
+    <div class="card text-center">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img loading="lazy" class="activator" style="width: 100%; height: 180px;" [src]="DataEntrante.img">
+        </div>
+        <div class="card-body">
+            <span class="card-title">
+                <h3><strong>{{DataEntrante.title}}</strong></h3>
+            </span><br>
+            <strong>{{ 'proyectos.tecnologia' | translate }}</strong>
+            <p [style]="DataEntrante.Style"> <a>{{DataEntrante.Estructura}}</a> - <a>{{DataEntrante.Css}}</a> -
+                <a>{{DataEntrante.JavaScript}}</a> - <a>{{DataEntrante.Materialize}}</a>
+            </p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#{{DataEntrante.href}}" role="button"
+                aria-expanded="false" aria-controls="collapseExample">Más Informacion</a>
+            <div class="collapse" id="{{DataEntrante.href}}">
+                <div class="card-body">
+                    <h5><strong>{{ 'proyectos.descripcion' | translate}}</strong></h5>
+                    <p><a class="{{DataEntrante.btn}}" href="{{DataEntrante.link}}" target="_blank">{{
+                            'proyectos.ver.proyecto' | translate
+                            }}</a>
+                        <br><br>
+                        <ng-container *ngIf="DataEntrante.url; else null">
+                            <a class="{{DataEntrante.btn}}" [attr.href]="DataEntrante.url" target="_blank">
+                                {{ 'proyectos.ver.page' | translate }}
+                            </a>
+                        </ng-container>
+                        <ng-template #DataEntrante.url>
+
+                        </ng-template>
+                    </p>
+                </div>
             </div>
-          </div>
+        </div>
     </div>
 </div>
-

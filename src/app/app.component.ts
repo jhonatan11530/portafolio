@@ -135,7 +135,7 @@ export class AppComponent implements AfterViewInit, OnInit {
         Style: 'color: dodgerblue;',
         JavaScript: 'JavaScript',
         Materialize: 'Bootstrap',
-        link: 'https://github.com/juniorwilson/inardek',
+        link: 'https://github.com/jhonatan11530/Inardek',
         btn: 'btn btn-primary',
         url: 'https://inardek.com/',
         img: 'assets/img/inardek.svg',
@@ -208,16 +208,29 @@ export class AppComponent implements AfterViewInit, OnInit {
       },
       {
         title: 'TELCOBRAS',
-        Estructura: 'C#',
-        Css: 'SQL SERVER',
+        Estructura: 'Bootstrap',
+        Css: 'Js',
         Style: 'color: dodgerblue;',
-        JavaScript: 'API Office Interop Excel',
-        Materialize: '',
+        JavaScript: 'Jquery',
+        Materialize: 'Laravel',
         link: 'https://github.com/jhonatan11530/Telcobras',
         btn: 'btn btn-primary',
-        url: '',
+        url: 'https://telcobras.com',
         img: 'assets/img/Telcobras.svg',
         href: 'Collapse7'
+      },
+      {
+        title: 'STRATECSA',
+        Estructura: 'Bootstrap',
+        Css: 'Js',
+        Style: 'color: dodgerblue;',
+        JavaScript: 'Jquery',
+        Materialize: 'Laravel',
+        link: 'https://github.com/jhonatan11530/stratecsa',
+        btn: 'btn btn-primary',
+        url: 'https://stratecsa.com',
+        img: 'assets/img/stratecsa.svg',
+        href: 'Collapse8'
       }
     ]
   }

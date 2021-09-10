@@ -68,9 +68,6 @@ export class AppComponent implements AfterViewInit, OnInit {
         img: 'assets/img/dotnet.svg'
       },
       {
-        img: 'assets/img/Nodejs.svg'
-      },
-      {
         img: 'assets/img/Git.svg'
       },
       {
@@ -95,6 +92,9 @@ export class AppComponent implements AfterViewInit, OnInit {
       },
       {
         img: 'assets/img/Visual_Studio.svg'
+      },
+      {
+        img: 'assets/img/Nodejs.svg'
       },
       {
         img: 'assets/img/ExpressJS.svg'

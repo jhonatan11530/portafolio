@@ -1,8 +1,8 @@
-<!--- NAVBAR -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top">
+<!--- NAVBAR  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <a class="navbar-brand">
         <img src="assets/img/maletin.svg" width="30" height="30" alt="">
-      </a>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,12 +34,133 @@
     </div>
 </nav>
 
-<div class="parallax4 mb-5">
-    <div class="text-center" style="padding: 150px; color: white;">
+<div class="mb-5"></div>
+<div class="parallax mb-5">
+    <div class="text-center center-block" style="color: white;">
         <h1>{{ 'BIENVENIDO' | translate }}</h1>
         <h3>{{ 'BIENVENIDO.porfolio' | translate }} <br> {{ 'BIENVENIDO.Descripcion' | translate }}</h3>
     </div>
 </div>
+
+<!--- PRESENTACION PERSONAL Y PERFIL PROFESIONAL  -->
+<div class="container mb-5">
+    <div class="section">
+        <h3>
+            <p style="text-align: center;" id="quiensoy">{{ 'sobre.mi' | translate }}</p>
+        </h3>
+        <div class="row ">
+            <div class="col-sm-6">
+                <img height="100%" width="100%" alt="Error Image" src="assets/img/yo.jpg">
+            </div>
+            <div class="col-sm-6" style=" font-family:Arial">
+                <h2 class="center blue-text lighten-2"></h2>
+                <h5><strong>{{ 'sobre.mi.nombre.es' | translate }}</strong></h5>
+                <strong>{{ 'sobre.mi.nombre' | translate }}</strong>
+                <p class="light">{{ 'sobre.mi.descripcion' | translate }}</p>
+                <h5><strong>{{ 'sobre.perfil.profecional' | translate }}</strong></h5>
+                <p class="light">{{ 'sobre.mi.perfil.profecional.descripcion' | translate }}</p>
+                <a class="btn btn-primary" href="assets/HV/Hoja de Vida.pdf" target="_blank"><i
+                        class="bi bi-cloud-arrow-down-fill"></i> {{ 'DESCARGA.HV' |
+                    translate }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---  DOCUMENTACION --->
+<div class="container mb-5">
+    <div class="section">
+        <h1>
+            <p style="text-align: center;">{{ 'Certificaciones' | translate }}</p>
+        </h1>
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <select id="certificadoItem" class="form-control">
+                    <option selected disabled>SELECCIONE CERTIFICACIONES A FILTRAR</option>
+                    <option value="TODO">TODAS LAS CERTIFICACIONES</option>
+                    <option value="SENA">SENA CERTIFICACIONES</option>
+                    <option value="GOOGLE">GOOGLE CERTIFICACIONES</option>
+                    <option value="DATABASE">BASE DE DATOS CERTIFICACIONES</option>
+                    <option value="OTROS">OTRAS CERTIFICACIONES</option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3">
+            <app-certificaciones [DataEntrante]='card' *ngFor='let card of Certificaciones'>
+            </app-certificaciones>
+        </div>
+    </div>
+</div>
+
+<!---  Habilidades tecnológicas --->
+<div class="container mb-5">
+    <div class="section">
+        <h1>
+            <p style="text-align: center;" id="habilidades">{{ 'Habilidades.tecnológicas' | translate }}</p>
+        </h1>
+        <div class="row row-cols-1 row-cols-md-3">
+            <app-card [DataEntrante]='card' *ngFor='let card of habilidad'></app-card>
+        </div>
+    </div>
+</div>
+
+<!--- CMS --->
+<div class="container mb-5">
+    <div class="section">
+        <h1>
+            <p style="text-align: center;">{{ 'CMS' | translate }}</p>
+        </h1>
+        <div class="row row-cols-1 row-cols-md-3">
+            <app-card [DataEntrante]='card' *ngFor='let card of CMS'></app-card>
+        </div>
+    </div>
+</div>
+
+<!--- Framework --->
+<div class="container mb-5">
+    <div class="section">
+        <h1>
+            <p style="text-align: center;" id="framework">{{ 'Framework' | translate }}</p>
+        </h1>
+        <div class="row row-cols-1 row-cols-md-3">
+            <app-card [DataEntrante]='card' *ngFor='let card of framework'></app-card>
+        </div>
+    </div>
+</div>
+
+<!--- DataBase --->
+<div class="container mb-5">
+    <div class="section">
+        <h1>
+            <p style="text-align: center;">{{ 'DataBase' | translate }}</p>
+        </h1>
+        <div class="row row-cols-1 row-cols-md-3">
+            <app-card [DataEntrante]='card' *ngFor='let card of Databases'></app-card>
+        </div>
+    </div>
+</div>
+
+<!--- parallax --->
+<div class="parallax1 mb-5"></div>
+
+<!--- Proyectos --->
+<div class="container mb-5">
+    <div class="section">
+        <h1>
+            <p style="text-align: center;" id="proyecto">{{ 'Proyectos.Realizados' | translate }}</p>
+        </h1>
+        <div class="row row-cols-1 row-cols-md-3">
+            <app-proyectos [DataEntrante]='card' *ngFor='let card of proyectos'></app-proyectos>
+        </div>
+    </div>
+</div>
+
+<!--- parallax --->
+<div class="parallax2"></div>
 
 <!-- Toast Lenguaje-->
 <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
@@ -55,7 +176,6 @@
         </div>
     </div>
 </div>
-
 <!-- Modal Lenguaje-->
 <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -147,126 +267,6 @@
         </div>
     </div>
 </div>
-
-<!--- PRESENTACION PERSONAL Y PERFIL PROFESIONAL  -->
-<div class="container">
-    <div class="section">
-        <h3>
-            <p style="text-align: center;" id="quiensoy">{{ 'sobre.mi' | translate }}</p>
-        </h3>
-        <div class="row ">
-            <div class="col-sm-6">
-                <img height="100%" width="100%" alt="Error Image" src="assets/img/yo.jpg">
-            </div>
-            <div class="col-sm-6" style=" font-family:Arial">
-                <h2 class="center blue-text lighten-2"></h2>
-                <h5><strong>{{ 'sobre.mi.nombre.es' | translate }}</strong></h5>
-                <strong>{{ 'sobre.mi.nombre' | translate }}</strong>
-                <p class="light">{{ 'sobre.mi.descripcion' | translate }}</p>
-                <h5><strong>{{ 'sobre.perfil.profecional' | translate }}</strong></h5>
-                <p class="light">{{ 'sobre.mi.perfil.profecional.descripcion' | translate }}</p>
-                <a class="btn btn-primary" href="assets/HV/Hoja de Vida.pdf" target="_blank"><i
-                        class="bi bi-cloud-arrow-down-fill"></i> {{ 'DESCARGA.HV' |
-                    translate }}</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!---  DOCUMENTACION --->
-<div class="container mb-4">
-    <div class="section">
-        <h1>
-            <p style="text-align: center;">{{ 'Certificaciones' | translate }}</p>
-        </h1>
-        <div class="row">
-            <div class="col-sm-4">
-            </div>
-            <div class="col-sm-4">
-                <select id="certificadoItem" class="form-control">
-                    <option selected disabled>SELECCIONE CERTIFICACIONES A FILTRAR</option>
-                    <option value="TODO">TODAS LAS CERTIFICACIONES</option>
-                    <option value="SENA">SENA CERTIFICACIONES</option>
-                    <option value="GOOGLE">GOOGLE CERTIFICACIONES</option>
-                    <option value="DATABASE">BASE DE DATOS CERTIFICACIONES</option>
-                    <option value="OTROS">OTRAS CERTIFICACIONES</option>
-                </select>
-            </div>
-            <div class="col-sm-4">
-            </div>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3">
-            <app-certificaciones [DataEntrante]='card' *ngFor='let card of Certificaciones'>
-            </app-certificaciones>
-        </div>
-    </div>
-</div>
-
-<!---  Habilidades tecnológicas --->
-<div class="container mb-4">
-    <div class="section">
-        <h1>
-            <p style="text-align: center;" id="habilidades">{{ 'Habilidades.tecnológicas' | translate }}</p>
-        </h1>
-        <div class="row row-cols-1 row-cols-md-3">
-            <app-card [DataEntrante]='card' *ngFor='let card of habilidad'></app-card>
-        </div>
-    </div>
-</div>
-
-<!--- CMS --->
-<div class="container mb-4">
-    <div class="section">
-        <h1>
-            <p style="text-align: center;">{{ 'CMS' | translate }}</p>
-        </h1>
-        <div class="row row-cols-1 row-cols-md-3">
-            <app-card [DataEntrante]='card' *ngFor='let card of CMS'></app-card>
-        </div>
-    </div>
-</div>
-
-<!--- Framework --->
-<div class="container mb-4">
-    <div class="section">
-        <h1>
-            <p style="text-align: center;" id="framework">{{ 'Framework' | translate }}</p>
-        </h1>
-        <div class="row row-cols-1 row-cols-md-3">
-            <app-card [DataEntrante]='card' *ngFor='let card of framework'></app-card>
-        </div>
-    </div>
-</div>
-
-<!--- DataBase --->
-<div class="container mb-4">
-    <div class="section">
-        <h1>
-            <p style="text-align: center;">{{ 'DataBase' | translate }}</p>
-        </h1>
-        <div class="row row-cols-1 row-cols-md-3">
-            <app-card [DataEntrante]='card' *ngFor='let card of Databases'></app-card>
-        </div>
-    </div>
-</div>
-
-<!--- parallax --->
-<div class="parallax1 mb-4"></div>
-
-<!--- Proyectos --->
-<div class="container mb-4">
-    <div class="section">
-        <h1>
-            <p style="text-align: center;" id="proyecto">{{ 'Proyectos.Realizados' | translate }}</p>
-        </h1>
-        <div class="row row-cols-1 row-cols-md-3">
-            <app-proyectos [DataEntrante]='card' *ngFor='let card of proyectos'></app-proyectos>
-        </div>
-    </div>
-</div>
-
-<!--- parallax --->
-<div class="parallax2"></div>
 
 <!-- Footer -->
 <footer class="bg-primary text-center text-lg-start">

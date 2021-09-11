@@ -99,8 +99,6 @@ export class AppComponent implements AfterViewInit, OnInit {
       {
         img: 'assets/img/ExpressJS.svg'
       }
-
-
     ]
     this.Databases = [
       {

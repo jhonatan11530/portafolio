@@ -1,6 +1,18 @@
+body::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(122, 122, 122);    /* color of the scroll thumb */
+}
+
 .parallax {
     background-image: url("/assets/img/Presentacion.svg");
-    min-height: 580px;
+    min-height: 625px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -9,6 +21,48 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.ocean { 
+      height: 200px;
+      width:100%;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
+  
+  .wave {
+    background: url("/assets/img/wave.svg") repeat-x; 
+    position: absolute;
+    bottom: -25px;
+    width: 6400px;
+    height: 100%;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .wave:nth-of-type(2) {
+    bottom: -25px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+  
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translateY(-25px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+  }
 
 .parallax1 {
     background-image: url("assets/img/parallax-Programming1.svg");
@@ -18,16 +72,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.parallax2 {
-    background-image: url("assets/img/parallax-Programming2.svg");
-    min-height: 580px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .mi {
     display: block;
     background: #949494;

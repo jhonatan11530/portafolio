@@ -229,6 +229,19 @@ export class AppComponent implements AfterViewInit, OnInit {
         url: 'https://stratecsa.com',
         img: 'assets/img/stratecsa.svg',
         href: 'Collapse8'
+      },
+      {
+        title: 'CONFEGUIAS',
+        Estructura: 'Bootstrap',
+        Css: 'Js',
+        Style: 'color: dodgerblue;',
+        JavaScript: 'Jquery',
+        Materialize: 'Laravel',
+        link: 'https://github.com/jhonatan11530/GuiasProfesionales',
+        btn: 'btn btn-primary',
+        url: 'https://confeguias.org',
+        img: 'assets/img/confeguias.svg',
+        href: 'Collapse9'
       }
     ]
   }
